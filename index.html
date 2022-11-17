@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="E-commerce de roupas da Kenzie Academy Brasil">
+    <link rel="icon"
+        href="https://yt3.ggpht.com/h7EYCYFSVNHD09-7EUqDVOEM9BTDdnuuKuQoSpL-4VjWIjeF-6gDDDdViCp5j2MwzO8LexnKoN0=s900-c-k-c0x00ffffff-no-rj">
+    <title>Kenzie Clothes</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/database.js"></script>
+    <script defer src="./js/index.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container-header">
+
+            <div class="header-left">
+                <h1>Kenzie Clothes</h1>
+            </div>
+
+            
+            <nav class="header-right">
+                <ul>
+                    <li> <button type="menu" id="button-todos"> Todos </button> </li>
+                    <li> <button type="menu" id="button-acessorios"> Acessórios </button> </li>
+                    <li> <button type="menu" id="button-calcados"> Calçados </button> </li>
+                    <li> <button type="menu" id="button-camisetas"> Camisetas </button> </li>
+                </ul>
+            </nav>
+            
+
+            <div class="container-toggle">
+                <div class="toggle light"></div>
+                <img id="img-moon" src="./img/moon-solid.svg" alt="">
+                <img id="img-sun"  src="./img/sun-solid.svg"  alt="">
+            </div>
+
+            <div class="header-center">
+                <div class="digital-clock hidden">
+                    <p id="hour">12</p>
+                    <p>:</p>
+                    <p id="minute">40</p>
+                    <p>:</p>
+                    <p id="second">08</p>
+                </div>
+                <img id="img-clock" src="./img/clock-solid.svg" alt="">
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="container-main">
+
+            <section class="produtos">
+                <div class="notfound closed">
+                    <img id="notfound-img"src="https://cliente.i9vando.com.br/modules/products/uploads/no-product.png" alt="">
+                </div>
+
+                <ul id="lista-produtos"></ul>
+            </section>
+
+            <aside id="aside">
+
+                <div class="modal">
+                    <p id="texto-invalido">Digite um texto válido.</p>
+                    <img src="./img/xmark.svg" alt="">
+                </div>
+
+                <form class="aside-top">
+                    <input id="input-search" type="text" autocomplete="off" placeholder="Digite aqui sua pesquisa...">
+                    <button id="button-search" type="submit">Pesquisar</button>
+                </form>
+
+                <div class="aside-carrinho">
+
+                    <h2>Carrinho de Compras</h2>
+
+                    <div class="carrinho-vazio">
+                        <h3>Carrinho Vazio</h3>
+                        <p>Adicione itens.</p>
+                    </div>
+
+                    
+                    <div id="display-itens" class="closed">
+                        <ul class="carrinho-itens"></ul>
+
+                        <div id="div-limpar">
+                            <p id="limpar-carrinho-text">Limpar carrinho</p>
+                            <img id="limpar-carrinho-img" src="./img/arrow-right-long-solid.svg" alt="">
+                            <img id="limpar-itens" src="./img/trash-can-solid.svg" alt="">
+                        </div>
+
+                        <div class="total-carrinho">
+                            <div class="total-left">
+                                <h3>Quantidade:</h3>
+                                <h3>Total:</h3>
+                            </div>
+                            <div class="total-right">
+                                <p id="quantidade-produtos"></p>
+                                <p id="preco-produtos"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer>
+
+        <div class="footer-left">
+            <a href="#top"> <img src="./img/footer-logo.svg" alt="Kenzie Academy Logo"> </a>
+        </div>
+
+        <div class="footer-center">
+            <h3>Kenzie na Rede</h3>
+            <ul>
+                <li> <a target="_blank" href="https://www.facebook.com/kenzieacademybr/?utm_campaign=home&utm_medium=organico&utm_source=site">Facebook</a> </li>
+                <li> <a target="_blank" href="https://www.instagram.com/kenzieacademybr/?utm_campaign=home&utm_medium=organico&utm_source=site">Instagram</a> </li>
+                <li> <a target="_blank" href="https://www.youtube.com/channel/UC6rcCbDzhVoIm1V7WnwPDIQ?sub_confirmation=1?utm_campaign=home&utm_medium=organico&utm_source=site">Youtube</a> </li>
+                <li> <a target="_blank" href="https://www.linkedin.com/school/kenzie-academy-brasil/?utm_campaign=home&utm_medium=organico&utm_source=site">Linkedin</a> </li>
+                <li> <a target="_blank" href="https://www.tiktok.com/@kenzieacademy_br?utm_campaign=home&utm_medium=organico&utm_source=site">Tiktok</a></li>                             <li> <a target="_blank" href="https://twitter.com/kenzieacademybr?utm_campaign=home&utm_medium=organico&utm_source=site">Twitter</a> </li>
+            </ul>
+        </div>
+
+        <div class="footer-right">
+            <h3>Contato</h3>
+            <ul>
+                <li> <p>R. General Mario Tourinho, 1733 - 706 - Seminário, Curitiba/PR</p> </li>
+                <li> <p>R. Rio Javari, 361 - Nossa Senhora das Graças, Manaus/AM</p> </li>
+                <li> <p>CNPJ 35.224.825/0001-74</p> </li>
+                <li> <a href="mailto:contato@kenzie.com.br" rel="noreferrer">contato@kenzie.com.br</a> </li>
+                <li> <a id="destaque" target="_blank" href="https://kenzie.gupy.io/">Trabalhe Conosco</a> </li>
+            </ul>
+        </div>
+
+    </footer>
+
+    <div class="direitos">
+        <p>© 2022 Kenzie Academy. All rights reserved.</p>
+    </div>
+
+</body>
+
+</html>

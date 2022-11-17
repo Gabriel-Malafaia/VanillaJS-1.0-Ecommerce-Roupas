@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+/* ---------------------------------------------HEADER--------------------------------------------- */
+
+
+header {
+    width: 100%;
+    height: 12%;
+    color: white;
+    border-bottom: 1px solid rgb(236, 236, 236);
+    margin-bottom: 4em;
+    background-color: #37268C;
+}
+
+.container-header {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-right ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.header-right ul li button {
+    font-size: 20px;
+    color: white;
+    background: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.header-right ul li button:hover {
+    color: rgb(139, 139, 255);
+}
+
+
+.container-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 2em;
+    background-color: white;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.container-toggle img {
+    width: 25px;
+    height: 25px;
+}
+
+#img-sun {
+    filter: invert(42%) sepia(71%) saturate(791%) hue-rotate(359deg) brightness(99%) contrast(105%);
+}
+
+#img-moon {
+    filter: invert(0%) sepia(8%) saturate(7500%) hue-rotate(300deg) brightness(103%) contrast(110%);
+}
+
+.toggle {
+    position: absolute;
+    transition: 0.5s;
+    background: #8E2DE2;
+    background: -webkit-linear-gradient(to right, #4A00E0, #7927c2);
+    background: linear-gradient(to right, #4A00E0, #7926c2);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    z-index: 2000;
+}
+
+.header-center {
+    display: flex;
+    gap: 1em;
+    letter-spacing: 5px;
+    -webkit-box-reflect: below 2px linear-gradient(transparent, #0004);
+}
+
+.light {
+    transform: translateX(-1em);
+}
+
+.dark {
+    transform: translateX(1em);
+}
+
+
+#img-clock {
+    width: 25px;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(114deg) brightness(109%) contrast(97%);
+}
+
+.digital-clock {
+    display: flex;
+    font-weight: 600;
+    max-width: 100px;
+}
+
+
+.hidden {
+    visibility: hidden;
+}
+
+
+/* ---------------------------------------------MAIN--------------------------------------------- */
+
+.container-main {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    gap: 5em;
+}
+
+.notfound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notfound img {
+    max-width: 500px;
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: invert(10%) sepia(83%) saturate(3567%) hue-rotate(248deg) brightness(104%) contrast(92%);
+}
+
+.produtos {
+    width: 70%;
+    max-width: 70%;
+}
+
+.produtos ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5em;
+    min-height: 80vh;
+}
+
+.card {
+    width: 300px;
+    min-height: 420px;
+    max-height: 600px;
+    border: 1px solid rgb(240, 215, 255);
+    border-radius: 10px;
+    list-style: none;
+    transition: all 0.5s;
+    background-color: white;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 10px grey;
+}
+
+.card img {
+    width: 100%;
+    height: 40%;
+    object-fit: contain;
+    object-position: center;
+    margin-bottom: 1em;
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+
+.card-content {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 55%;
+}
+
+.card-content h6 {
+    background-color: #37268C;
+    color: white;
+    min-width: 35%;
+    width: 40%;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.card-content span {
+    font-size: 20px;
+    color: #37268C;
+    font-weight: 600;
+}
+
+.card-content p {
+    font-size: 18px;
+}
+
+.card-content button {
+    height: 2em;
+    background-color: #37268C;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.card:hover button,
+.card:hover h6 {
+    background: #7125b4;
+    background: -webkit-linear-gradient(to right, #4A00E0, #641fa0);
+    background: linear-gradient(to right, #4A00E0, #501b7e);
+}
+
+/* ---------------------------------------------ASIDE--------------------------------------------- */
+
+aside {
+    min-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.aside-top {
+    width: 100%;
+    height: 3em;
+    display: flex;
+    flex-wrap: nowrap;
+    transition: all 0.5;
+}
+
+.aside-top input {
+    height: 100%;
+    width: 75%;
+    background-color: #F5F5F5;
+    padding: 0 1em;
+    border: 1px solid #37268C;
+}
+
+.aside-top button {
+    width: 25%;
+    background-color: #37268C;
+    color: white;
+    font-size: 18px;
+    height: 100%;
+    border-radius: 0 5px 5px 0;
+}
+
+.aside-top button:hover {
+    background: #7125b4;
+    background: -webkit-linear-gradient(to right, #4A00E0, #641fa0);
+    background: linear-gradient(to right, #4A00E0, #501b7e);
+}
+
+.aside-carrinho {
+    width: 100%;
+}
+
+.aside-carrinho h2 {
+    background-color: #37268C;
+    color: white;
+    width: 100%;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+}
+
+/* ---------------------------------------------CARRINHO-VAZIO--------------------------------------------- */
+#div-limpar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1em;
+    align-items: center;
+    text-align: center;
+}
+
+#div-limpar img {
+    width: 20px;
+    cursor: pointer;
+}
+
+#div-limpar p {
+    color: black;
+    font-weight: 600;
+}
+
+#limpar-itens {
+    filter: invert(0%) sepia(0%) saturate(7488%) hue-rotate(338deg) brightness(100%) contrast(104%);
+}
+
+.carrinho-vazio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    background-color: #F5F5F5;
+    border-radius: 0 0 5px 5px;
+    gap: 1em;
+}
+
+.carrinho-vazio h3 {
+    font-size: 24px;
+}
+
+.closed {
+    display: none;
+}
+
+/* ---------------------------------------------CARRINHO-COM-ITENS--------------------------------------------- */
+.carrinho-itens {
+    width: 100%;
+    max-height: 400px;
+    max-width: 480px;
+    height: 400px;
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    overflow-y: auto;
+}
+
+.carrinho-itens::-webkit-scrollbar {
+    width: 10px;
+    margin-left: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #37268C;
+    border-radius: 10px;
+}
+
+.carrinho-itens li {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    transition: all 0.2s;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 5px 0 5px;
+
+}
+
+.carrinho-itens li:hover {
+    transform: scale(0.95);
+    border-radius: 5px;
+}
+
+.carrinho-itens img {
+    width: 150px;
+    height: 100px;
+}
+
+.contador {
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+    background-color: #37268C;
+    width: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 5px 0 0 5px;
+}
+
+.carrinho-left img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.carrinho-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.carrinho-right p {
+    font-size: 20px;
+    font-weight: 600;
+    width: 200px;
+    max-width: 200px;
+}
+
+.carrinho-right span {
+    color: #37268C;
+    font-weight: 600;
+}
+
+.carrinho-right button {
+    max-width: 150px;
+    border-radius: 5px;
+    font-size: 14px;
+    background: none;
+    color: red;
+    text-align: start;
+    cursor: pointer;
+}
+
+/* ---------------------------------------------TOTAL CARRINHO--------------------------------------------- */
+.total-carrinho {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 120px;
+    max-height: 200px;
+    background-color: #37268C;
+    color: white;
+    padding: 0 1em;
+    border-radius: 0 0 10px 10px;
+}
+
+.total-carrinho h3:nth-child(1) {
+    margin-bottom: 1em;
+}
+
+.total-carrinho p:nth-child(1) {
+    margin-bottom: 1em;
+    text-align: end;
+}
+
+
+
+/* ---------------------------------------------------FOOTER------------------------------------------------ */
+
+footer {
+    margin-top: 5em;
+    background-color: #37268C;
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+
+footer h3 {
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 300px;
+}
+
+footer li {
+    list-style: none;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
+}
+
+footer a:hover {
+    color: rgb(95, 95, 255);
+}
+
+#destaque {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.direitos {
+    color: white;
+    border-top: 1px solid rgb(146, 146, 146);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5em;
+    background-color: #37268C;
+}
+
+/* ------------MODAL--------------- */
+
+.modal {
+    position: absolute;
+    top: 14%;
+    font-size: 24px;
+    color: black;
+    display: none;
+    align-items: center;
+    gap: 10px;
+
+    animation-name: shaking;
+
+    animation-duration: 250ms;
+}
+
+@keyframes shaking {
+    20% {
+        transform: translateY(-5px);
+    }
+
+    40% {
+        transform: translateY(5px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+
+    80% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+
+.modal img {
+    width: 25px;
+    height: 50px;
+    filter: invert(24%) sepia(92%) saturate(6259%) hue-rotate(355deg) brightness(112%) contrast(124%);
+}
