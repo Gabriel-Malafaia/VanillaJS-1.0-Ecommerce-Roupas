@@ -5,6 +5,8 @@
 
 ## 💻 Tecnologias
 - Vanilla JS
+- HTML
+- CSS
  
 ## 🔆 Algumas Funcionalidades
 - É possível filtrar os produtos por categoria.
